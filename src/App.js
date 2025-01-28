@@ -4,7 +4,7 @@ import Footer from './Components/Footer/Footer'
 import Homepage from './Components/Pages/Homepage'
 const App = () => {
   return (
-    <div>
+    <div className='relative'>
      <Header />
      <Homepage />
      <Footer />

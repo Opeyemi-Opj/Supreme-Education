@@ -8,8 +8,8 @@ const Header = () => {
 const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <section className='bg-white  px-[5%] py-[2%] -mt-5'>
-        <div className='flex gap-1 '>
+    <section className='  px-[5%] py-[3%] -mt-5 ' >
+        <div className='flex gap-1 bg-[#ffffff] '>
       <div className='w-1/2 flex gap-10 items-center'>
       <div className="flex gap-2">
               <img src={Vector} alt="" className="w-5 h-5 object-contain" />
@@ -71,7 +71,7 @@ const [isSearchOpen, setIsSearchOpen] = useState(false);
       </div>
     </div>
 
-    <div className="-mt-[40px]">
+    <div className='-mt-[40px] bg-transparent'>
   <div className="flex flex-col md:flex-row md:space-x-6">
     {/* Column 1 */}
     <div className="flex-1 ">
