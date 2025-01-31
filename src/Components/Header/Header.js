@@ -8,8 +8,8 @@ const Header = () => {
 const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <section className='  px-[5%] py-[3%] -mt-5 ' >
-        <div className='flex gap-1 bg-[#ffffff] '>
+    <section className='fixed top-0 left-0 w-full  z-50' >
+        <div className='px-[5%] py-[2%] flex gap-1  bg-white shadow-lg'>
       <div className='w-1/2 flex gap-10 items-center'>
       <div className="flex gap-2">
               <img src={Vector} alt="" className="w-5 h-5 object-contain" />
