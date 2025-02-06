@@ -24,7 +24,6 @@ import Image21 from '../../assets/images/export.png';
 import CustomLeftIcon from '../../assets/icons/VectorLeft.svg'; // Your custom left arrow icon 
 import CustomRightIcon from '../../assets/icons/VectorRight.svg'; // Your custom right arrow icon
 import CustomDotIcon from '../../assets/icons/ert-dot.svg'; // Your custom dot icon*/
-/*import Vector from '../../assets/images/Vector.png'*/ 
 import Footerfl from '../../assets/images/facebook.png'
 import  bg1  from '../../assets/images/image13.png';
 import  bg2  from '../../assets/images/image57.png';
@@ -39,8 +38,7 @@ import  bg10  from '../../assets/images/Image.png';
 import  bg11  from '../../assets/images/image55.png';
 import  bg12  from '../../assets/images/image90.png';
 import  bg13  from '../../assets/images/Newimage55(1).png';
-
-
+import PopupMenu from '../Menu/PopupMenu';
 
 
 const slides = [
@@ -52,6 +50,10 @@ const slides = [
 ];
 
 const Homepage = () => {
+
+
+
+  const [activeTab, setActiveTab] = useState("latestNews");
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -131,7 +133,7 @@ const Homepage = () => {
         <div className='px-[5%] py-[5%]'>
         <div className='text-center space-y-[3%]'>
              <h1 className='font-cormorant text-[#292D32] text-[72px] font-bold leading-[87.19px] '>Welcome to Supreme</h1>
-             <p class="font-raleway text-[#292D32] text-[18px] leading-[40px] pl-[17%] pr-[17%]">Supreme Education Foundation School is a centre of excellence designed to provide world-class education in an exciting learning environment for students between the ages of 3 months to 18 years. </p> 
+             <p class="font-raleway text-[#292D32] text-[18px] font-medium leading-[40px] pl-[17%] pr-[17%]">Supreme Education Foundation School is a centre of excellence designed to provide world-class education in an exciting learning environment for students between the ages of 3 months to 18 years. </p> 
              <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
          bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
         hover:bg-[#C8352E] '>Learn more </button>
@@ -185,6 +187,7 @@ const Homepage = () => {
 
 </div>
 
+
   <div className="flex flex-col gap-20  sm:flex-row">
   <div className="w-[439px] h-[422px] rounded-md sm:w-1/2 text-center grid place-items-center group overflow-hidden relative"
   style={{ backgroundImage: `url(${bg2})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -236,7 +239,6 @@ const Homepage = () => {
     </button>
   </div>
 </div>
-
 </div>
 </div>
 
@@ -368,13 +370,17 @@ const Homepage = () => {
 </div>
 </div>
 
-<div className='p-[5%] text-center'>
+<div className='p-[5%]'>
+<PopupMenu />
+</div>
+
+<div className=' bg-blue-100 p-[5%] text-center'>
 <h2 className='font-cormorant text-[#292D32] text-[64px] font-bold leading-[77.5px]'>Supreme Stories</h2>
 
 <div className="flex flex-col sm:flex-row w-full gap-5 items-center sm:items-start">
   {/* Left Column (Smaller) */}
   <div className="w-1/6 sm:w-1/5 flex items-center justify-center">
-    <img src={Image16} alt="/" className="w-[50px] h-[50px] sm:w-[75px] sm:h-[75px]" />
+    <img src={Image16} alt="/" className="w-[50px] h-[0px] sm:w-[75px] sm:h-[75px]" />
   </div>
 
   {/* Middle Column (Larger) */}
@@ -388,148 +394,167 @@ const Homepage = () => {
     </p>
 </div>
 
-
   {/* Right Column (Smaller) */}
   <div className="w-1/6 sm:w-1/5 flex items-center justify-center">
-    <img src={Image18} alt="/" className="w-[50px] h-[50px] sm:w-[75px] sm:h-[75px]" />
+    <img src={Image18} alt="/" className="w-[50px] h-[0px] sm:w-[75px] sm:h-[75px]" />
   </div>
 </div>
 </div>
 
-<div className=' bg-white p-[5%]'>
-<h2 className='font-cormorant text-[#292D32] text-[64px] font-bold leading-[77.5px] text-center'>News at Supreme</h2>
-<div className='flex gap-8 items-center justify-center mb-10 '>
-  <p className='font-raleway text-[#525458] text-[18px] font-semibold  leading-[21.13px]'>Latest News</p>
-  <p className='font-raleway text-[#525458] text-[18px] font-semibold  leading-[21.13px]'>Facebook</p>
-  <p className='font-raleway text-[#525458] text-[18px] font-semibold  leading-[21.13px]'>Instagram</p>
-  <img src={Image19} alt="/" className='w-[100px] h-[40px]'/>
-  <img src={Image20} alt="/" className='w-[90px] h-[45px]'/>
-  </div>
+<div className="bg-white p-[5%]">
+      <h2 className="font-cormorant text-[#292D32] text-[64px] font-bold leading-[77.5px] text-center pb-10">
+        News at Supreme
+      </h2>
 
-  <div>
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-center w-full">
-  {/* Column 1 */}
-  <div className="relative h-[300px] bg-cover bg-center bg-no-repeat rounded-md p-[5%]" 
-    style={{ backgroundImage: `url(${bg8})` }}>
-  
-  {/* Content Wrapper - Positioned at the Bottom */}
-  <div className="absolute bottom-0 left-0 w-full p-[5%]">
-  <div className="bg-[#629948D6] flex justify-start items-center gap-3 rounded-md p-[5%]">
-  <p className="font-raleway text-[#FFFFFF] text-[18px] font-semibold leading-[24px] text-left">
-    2022 Supreme Education Foundation Scholarship Entrance Examination into Year 7
-  </p>
-  <img src={Image21} alt="/" className="w-[20px] h-[20px]" />
-  </div>
-  </div>
-</div>
+      {/* Tab Navigation */}
+      <div className="flex gap-8 items-center justify-center mb-[5%]">
+        <p className={`font-raleway text-[18px] font-semibold leading-[21.13px] cursor-pointer pb-5 ${
+            activeTab === "latestNews" ? "border-b-4 border-[#C8352E]" : "text-[#525458]"}`}
+          onClick={() => setActiveTab("latestNews")}>Latest News</p>
+        <p className={`font-raleway text-[18px] font-semibold leading-[21.13px] cursor-pointer pb-5 ${ activeTab === "facebook" ? "border-b-4 border-[#C8352E]" : "text-[#525458]"}`}
+          onClick={() => setActiveTab("facebook")}>Facebook </p>
+        <p className={`font-raleway text-[18px] font-semibold leading-[21.13px] cursor-pointer pb-5 ${
+          activeTab === "instagram" ? "border-b-4 border-[#C8352E]" : "text-[#525458]" }`}
+          onClick={() => setActiveTab("instagram")}> Instagram </p>
+           {/* X (Twitter) Link */}
+      <a href="https://x.com/i/flow/login?redirect_after_login=%2Fiamsupremesch" target="_blank" 
+        rel="noopener noreferrer">
+        <img src={Image19} alt="X (Twitter)" className="w-[100px] h-[40px] cursor-pointer" /></a>
+      {/* YouTube Link */}
+      <a href="https://www.youtube.com/channel/UCS8z8ciwQSZmxAwTyxk2bOQ" target="_blank" 
+        rel="noopener noreferrer">
+        <img src={Image20} alt="YouTube" className="w-[90px] h-[45px] cursor-pointer" /></a>
+      </div>
 
+      {/* Latest News Section */}
+      {activeTab === "latestNews" && (
+        <div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-center w-full">
+        {/* Column 1 */}
+        <div className="relative h-[300px] bg-cover bg-center bg-no-repeat rounded-md p-[5%]" 
+          style={{ backgroundImage: `url(${bg8})` }}>
+        
+        {/* Content Wrapper - Positioned at the Bottom */}
+        <div className="absolute bottom-0 left-0 w-full p-[5%]">
+        <div className="bg-[#629948D6] flex justify-start items-center gap-3 rounded-md p-[5%]">
+        <p className="font-raleway text-[#FFFFFF] text-[18px] font-semibold leading-[24px] text-left">
+          2022 Supreme Education Foundation Scholarship Entrance Examination into Year 7
+        </p>
+        <img src={Image21} alt="/" className="w-[20px] h-[20px]" />
+        </div>
+        </div>
+      </div>
+      
+      
+        {/* Column 2 */}
+        <div className="relative h-[300px] bg-cover bg-center bg-no-repeat rounded-md p-[5%]" 
+          style={{ backgroundImage: `url(${bg9})` }}>
+        
+        {/* Content Wrapper - Positioned at the Bottom */}
+        <div className="absolute bottom-0 left-0 w-full p-[5%]">
+        <div className="bg-[#629948D6] flex justify-between  items-center gap-3 rounded-md p-[5%]">
+        <p className="font-raleway text-[#FFFFFF] text-[18px] font-semibold leading-[24px] text-left">
+        Supreme Leverage Every Friday by 5:00pm
+        </p>
+        <img src={Image21} alt="/" className="w-[20px] h-[20px]" />
+        </div>
+        </div>
+      </div>
+      </div>
+      
+      <div className="flex justify-center items-center w-full mt-10">
+        <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
+               bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
+              hover:bg-[#C8352E]'>Learn more 
+        </button>
+      </div>
+      </div>
+      )}
 
-  {/* Column 2 */}
-  <div className="relative h-[300px] bg-cover bg-center bg-no-repeat rounded-md p-[5%]" 
-    style={{ backgroundImage: `url(${bg9})` }}>
-  
-  {/* Content Wrapper - Positioned at the Bottom */}
-  <div className="absolute bottom-0 left-0 w-full p-[5%]">
-  <div className="bg-[#629948D6] flex justify-between  items-center gap-3 rounded-md p-[5%]">
-  <p className="font-raleway text-[#FFFFFF] text-[18px] font-semibold leading-[24px] text-left">
-  Supreme Leverage Every Friday by 5:00pm
-  </p>
-  <img src={Image21} alt="/" className="w-[20px] h-[20px]" />
-  </div>
-  </div>
-</div>
-</div>
+      {/* Facebook Section */}
+      {activeTab === "facebook" && (
+        <div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  w-full mb-10 mt-10'>
+          <div className='relative bg-cover bg-center bg-no-repeat rounded-md bg-gray-200 p-4 'style={{ backgroundImage: `url(${bg10})` }}>
+          </div>
+        
+          <div className='bg-[#FFFFFF] p-4 rounded-md border-2 border-solid border-[#E6E3E3]'>
+          <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] mb-4'>Taekwondo Club had their annual promotion and grading ceremony where children were rewarded for their hard work and resilience during the academic session.</p>
+          <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] break-words'>
+          #Supremecares,#iamsupremesch,#Bestschoolinlagos,#Bestschoolinnigeria,#Britishcurriculum,#Nigeriancurriculum,#Schoolsinlagos,#Schoolsinnigeria,#playmatters,#playbasedlearning,#earlychildhood,#earlychildhoodeducation,#earlylearning,#childcare,#learning,#eyfsideas,#childdevelopment
+          </p>
+          <div className='flex justify-between items-center mt-5'>
+           <img src={Footerfl} alt="" className= 'w-[30.28px] h-[30.28px]' />
+           <p className='font-raleway text-[#525458] text-[14px] font-medium  leading-[19px]'>July 8, 2023</p>
+         </div>
+          </div>
+        
+          <div className='relative  bg-cover bg-center bg-no-repeat rounded-md bg-gray-200 p-4 'style={{ backgroundImage: `url(${bg11})` }}>
+          </div>
+        
+          <div className='bg-[#FFFFFF] p-4 rounded-md border-2 border-solid border-[#E6E3E3]'>
+          <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] mb-4'>We had our very own student at Business Morning.</p>
+          <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] break-words'>
+          #Supremecares,#iamsupremesch,#Bestschoolinlagos,#Bestschoolinnigeria,#Britishcurriculum,#Nigeriancurriculum,#Schoolsinlagos,#Schoolsinnigeria,#playmatters,#playbasedlearning,#earlychildhood,#earlychildhoodeducation,#earlylearning,#childcare,#learning,#eyfsideas,#childdevelopment
+          </p>
+         <div className='flex justify-between items-center mt-[70px]'>
+           <img src={Footerfl} alt="" className= 'w-[30.28px] h-[30.28px]' />
+           <p className='font-raleway text-[#525458] text-[14px] font-medium  leading-[19px]'>July 8, 2023</p>
+         </div>
+          </div>
+         </div>
+         <div className="flex justify-center items-center w-full mt-10">
+          <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
+                 bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
+                hover:bg-[#C8352E]'>Find us on Facebook 
+          </button>
+        </div>
+         </div>
+      )}
 
-<div className="flex justify-center items-center w-full mt-10">
-  <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
-         bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
-        hover:bg-[#C8352E]'>Learn more 
-  </button>
-</div>
-</div>
-
-<div>
-<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  w-full mb-10 mt-10'>
-  <div className='relative bg-cover bg-center bg-no-repeat rounded-md bg-gray-200 p-4 'style={{ backgroundImage: `url(${bg10})` }}>
-  </div>
-
-  <div className='bg-[#FFFFFF] p-4 rounded-md border-2 border-solid border-[#E6E3E3]'>
-  <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] mb-4'>Taekwondo Club had their annual promotion and grading ceremony where children were rewarded for their hard work and resilience during the academic session.</p>
-  <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] break-words'>
-  #Supremecares,#iamsupremesch,#Bestschoolinlagos,#Bestschoolinnigeria,#Britishcurriculum,#Nigeriancurriculum,#Schoolsinlagos,#Schoolsinnigeria,#playmatters,#playbasedlearning,#earlychildhood,#earlychildhoodeducation,#earlylearning,#childcare,#learning,#eyfsideas,#childdevelopment
-  </p>
-  <div className='flex justify-between items-center mt-5'>
-   <img src={Footerfl} alt="" className= 'w-[30.28px] h-[30.28px]' />
-   <p className='font-raleway text-[#525458] text-[14px] font-medium  leading-[19px]'>July 8, 2023</p>
- </div>
-  </div>
-
-  <div className='relative  bg-cover bg-center bg-no-repeat rounded-md bg-gray-200 p-4 'style={{ backgroundImage: `url(${bg11})` }}>
-  </div>
-
-  <div className='bg-[#FFFFFF] p-4 rounded-md border-2 border-solid border-[#E6E3E3]'>
-  <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] mb-4'>We had our very own student at Business Morning.</p>
-  <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] break-words'>
-  #Supremecares,#iamsupremesch,#Bestschoolinlagos,#Bestschoolinnigeria,#Britishcurriculum,#Nigeriancurriculum,#Schoolsinlagos,#Schoolsinnigeria,#playmatters,#playbasedlearning,#earlychildhood,#earlychildhoodeducation,#earlylearning,#childcare,#learning,#eyfsideas,#childdevelopment
-  </p>
- <div className='flex justify-between items-center mt-[70px]'>
-   <img src={Footerfl} alt="" className= 'w-[30.28px] h-[30.28px]' />
-   <p className='font-raleway text-[#525458] text-[14px] font-medium  leading-[19px]'>July 8, 2023</p>
- </div>
-  </div>
- </div>
- <div className="flex justify-center items-center w-full mt-10">
-  <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
-         bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
-        hover:bg-[#C8352E]'>Find us on Facebook 
-  </button>
-</div>
- </div>
-
-<div>
-  <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  w-full mb-10 mt-10'>
-  <div className='relative bg-cover bg-center bg-no-repeat rounded-md bg-gray-200 p-4 'style={{ backgroundImage: `url(${bg12})` }}>
-  </div>
-
-  <div className='bg-[#FFFFFF] p-4 rounded-md border-2 border-solid border-[#E6E3E3]'>
-  <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] mb-4'>Taekwondo Club had their annual promotion and grading ceremony where children were rewarded for their hard work and resilience during the academic session.</p>
-  <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] break-words'>
-  #Supremecares,#iamsupremesch,#Bestschoolinlagos,#Bestschoolinnigeria,#Britishcurriculum,#Nigeriancurriculum,#Schoolsinlagos,#Schoolsinnigeria,#playmatters,#playbasedlearning,#earlychildhood,#earlychildhoodeducation,#earlylearning,#childcare,#learning,#eyfsideas,#childdevelopment
-  </p>
-  <div className='flex justify-between items-center mt-5'>
-   <img src={Footerfl} alt="" className= 'w-[30.28px] h-[30.28px]' />
-   <p className='font-raleway text-[#525458] text-[14px] font-medium  leading-[19px]'>July 8, 2023</p>
- </div>
-  </div>
-
-  <div className='relative bg-cover bg-center bg-no-repeat rounded-md bg-gray-200 p-4 'style={{ backgroundImage: `url(${bg13})` }}>
-  </div>
-
-  <div className='bg-[#FFFFFF] p-4 rounded-md border-2 border-solid border-[#E6E3E3]'>
-  <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] mb-4'>We had our very own student at Business Morning.</p>
-  <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] break-words'>
-  #Supremecares,#iamsupremesch,#Bestschoolinlagos,#Bestschoolinnigeria,#Britishcurriculum,#Nigeriancurriculum,#Schoolsinlagos,#Schoolsinnigeria,#playmatters,#playbasedlearning,#earlychildhood,#earlychildhoodeducation,#earlylearning,#childcare,#learning,#eyfsideas,#childdevelopment
-  </p>
- <div className='flex justify-between items-center mt-[70px]'>
-   <img src={Footerfl} alt="" className= 'w-[30.28px] h-[30.28px]' />
-   <p className='font-raleway text-[#525458] text-[14px] font-medium  leading-[19px]'>July 8, 2023</p>
- </div>
-  </div>
- </div>
- <div className="flex justify-center items-center w-full mt-10">
-  <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
-         bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
-        hover:bg-[#C8352E]'>Follow us on Instagram
-  </button>
-</div>
-
- </div>
-
- 
-
- 
-
-  </div>
+      {/* Instagram Section */}
+      {activeTab === "instagram" && (
+        <div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  w-full mb-10 mt-10'>
+        <div className='relative bg-cover bg-center bg-no-repeat rounded-md bg-gray-200 p-4 'style={{ backgroundImage: `url(${bg12})` }}>
+        </div>
+      
+        <div className='bg-[#FFFFFF] p-4 rounded-md border-2 border-solid border-[#E6E3E3]'>
+        <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] mb-4'>Taekwondo Club had their annual promotion and grading ceremony where children were rewarded for their hard work and resilience during the academic session.</p>
+        <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] break-words'>
+        #Supremecares,#iamsupremesch,#Bestschoolinlagos,#Bestschoolinnigeria,#Britishcurriculum,#Nigeriancurriculum,#Schoolsinlagos,#Schoolsinnigeria,#playmatters,#playbasedlearning,#earlychildhood,#earlychildhoodeducation,#earlylearning,#childcare,#learning,#eyfsideas,#childdevelopment
+        </p>
+        <div className='flex justify-between items-center mt-5'>
+         <img src={Footerfl} alt="" className= 'w-[30.28px] h-[30.28px]' />
+         <p className='font-raleway text-[#525458] text-[14px] font-medium  leading-[19px]'>July 8, 2023</p>
+       </div>
+        </div>
+      
+        <div className='relative bg-cover bg-center bg-no-repeat rounded-md bg-gray-200 p-4 'style={{ backgroundImage: `url(${bg13})` }}>
+        </div>
+      
+        <div className='bg-[#FFFFFF] p-4 rounded-md border-2 border-solid border-[#E6E3E3]'>
+        <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] mb-4'>We had our very own student at Business Morning.</p>
+        <p className='className="font-raleway text-[#525458] text-[14px] font-medium  leading-[19px] break-words'>
+        #Supremecares,#iamsupremesch,#Bestschoolinlagos,#Bestschoolinnigeria,#Britishcurriculum,#Nigeriancurriculum,#Schoolsinlagos,#Schoolsinnigeria,#playmatters,#playbasedlearning,#earlychildhood,#earlychildhoodeducation,#earlylearning,#childcare,#learning,#eyfsideas,#childdevelopment
+        </p>
+       <div className='flex justify-between items-center mt-[70px]'>
+         <img src={Footerfl} alt="" className= 'w-[30.28px] h-[30.28px]' />
+         <p className='font-raleway text-[#525458] text-[14px] font-medium  leading-[19px]'>July 8, 2023</p>
+       </div>
+        </div>
+       </div>
+       <div className="flex justify-center items-center w-full mt-10">
+        <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
+               bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
+              hover:bg-[#C8352E]'>Follow us on Instagram
+        </button>
+       
+        
+      </div>
+       </div>
+      )}
+    </div>
 
 
     </div>

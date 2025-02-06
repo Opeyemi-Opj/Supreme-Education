@@ -1,14 +1,31 @@
 import React, { useState }from 'react'
 import Vector from '../../assets/images/Vector.png'
 import Sms from '../../assets/images/sms.png'
-import Menu from '../../assets/images/Menu-lg.png'
+import MenuIcon from '../../assets/icons/menu.svg.svg';
 import Logo from '../../assets/images/Site-logo.png'
+// import PopupMenu from '../Menu/PopupMenu';
 
 const Header = () => {
+
+// const [isMenuOpen, setIsMenuOpen] = useState(false);  // Menu Icon
+
+  
+
+  // Function to open menu
+  //const openMenu = () => {
+   // setIsMenuOpen(true);
+ // };
+
+  // Function to close menu
+  //const closeMenu = () => {
+  //  setIsMenuOpen(false);
+ // };
+  
+
 const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <section className='fixed top-0 left-0 w-full  z-50' >
+    <section className='fixed top-0 left-0 w-full  z-50'>
         <div className='px-[5%] py-[2%] flex gap-1  bg-white shadow-lg'>
       <div className='w-1/2 flex gap-10 items-center'>
       <div className="flex gap-2">
@@ -61,17 +78,18 @@ const [isSearchOpen, setIsSearchOpen] = useState(false);
                   isSearchOpen
                     ? "max-w-[120px] opacity-100 px-4"
                     : "max-w-0 opacity-0 px-0"
-                }`}
-              />
+                }`}/>
               </div>
 
-      <div className='border-l-2 border-solid border-black pl-[3%]'>
-    <img src={Menu} alt='' className='w-[100px]  h-[30px] ' />
+    <div className='border-l-2 border-solid border-black pl-[3%]'>
+    <img src={MenuIcon} alt="Menu" className="w-[100px] h-[30px]" />
     </div>
+              
+
       </div>
     </div>
 
-    <div className='-mt-[40px] bg-transparent'>
+  <div className='-mt-[40px] bg-opacity-01'>
   <div className="flex flex-col md:flex-row md:space-x-6">
     {/* Column 1 */}
     <div className="flex-1 ">
@@ -81,7 +99,7 @@ const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     {/* Column 2 */}
     <div className="flex-1 ">
-    <img src={Logo} alt="" className= 'w-[200px] h-[200px] ml-[100px]' />
+    <img src={Logo} alt="/" className= 'w-[200px] h-[200px] ml-[100px]' />
      
     </div>
 
