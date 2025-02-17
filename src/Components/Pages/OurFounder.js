@@ -4,6 +4,7 @@ import Image1 from '../../assets/images/image7(1).png'
 import Image2 from '../../assets/images/Image(7).png'
 import  bg1  from '../../assets/images/Creed.png';
 import  bg2  from '../../assets/images/Building-image.png';
+import Arrowlft from '../../assets/images/arrow-left.png'
 
 const OurFounder = () => {
   return (
@@ -13,9 +14,6 @@ const OurFounder = () => {
       <p className='text-center font-cormorant text-white text-[32px] sm:text-[48px] md:text-[56px] lg:text-[72px] font-bold leading-tight mt-[-50px] sm:mt-[-80px] md:mt-[-100px] lg:mt-[-130px]'>
         Our Founder
       </p>
-      
-      
-
       
       <div className="flex flex-wrap  px-4 sm:px-8 md:px-[5%] pt-[5%] pb-[3%] lg:pb-[2%] bg-[#F6F8F5] gap-3 sm:gap-6 md:gap-12 lg:gap-28 items-center text-center">
 
@@ -39,9 +37,11 @@ const OurFounder = () => {
       </div>
 
       <div className='pl-[5%] pr-[5%] pb-[5%]'>
-      <div className='flex gap-4 pt-7 pb-16 items-center'>
-  <   Link to='/' className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> HOME &gt;</Link>
-      <p className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> ABOUT US &gt; </p>
+      <div className='flex gap-2 pt-7 pb-16 items-center'>
+     <Link to='/' className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> HOME</Link>
+     <img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
+      <p className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> ABOUT US </p>
+      <img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
       <p className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> OUR FOUNDER </p>
       </div>
 
@@ -66,7 +66,7 @@ We have a commitment to keep innovating to ensure we provide a 21st century educ
       </div>
       </div>
 
-//
+
 <div className="flex flex-col sm:flex-row gap-5 mb-[5%] px-[5%]">
   {/* Column 1 */}
   <div className="flex-1 min-h-[314px] rounded-md text-center grid place-items-center group overflow-hidden relative"

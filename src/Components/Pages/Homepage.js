@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom'; // ✅ Correct Import
 import Image1 from '../../assets/images/imageslider1.png'
 import Image2 from '../../assets/images/imageslider2.png';
 import Image3 from '../../assets/images/imageslider3.png';
@@ -134,9 +135,13 @@ const Homepage = () => {
         <div className='text-center space-y-[3%]'>
              <h1 className='font-cormorant text-[#292D32] text-[72px] font-bold leading-[87.19px] '>Welcome to Supreme</h1>
              <p class="font-raleway text-[#292D32] text-[18px] font-medium leading-[40px] pl-[17%] pr-[17%]">Supreme Education Foundation School is a centre of excellence designed to provide world-class education in an exciting learning environment for students between the ages of 3 months to 18 years. </p> 
-             <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
-         bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
-        hover:bg-[#C8352E] '>Learn more </button>
+             <Link to="/our-founder">
+  <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
+    bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
+    hover:bg-[#C8352E]'>
+    Learn more
+  </button>
+</Link>
         </div>
 
   <div className="grid grid-cols-1 mr-[20%] md:grid-cols-3 gap-8 mt-[7%] ">
@@ -172,16 +177,17 @@ const Homepage = () => {
       A blend of Nigerian and British curricula which prepare and equip students for higher education and entry into advanced level undergraduate programmes across the world.
     </p>
     
-    {/* Button */}
-    <button className="flex mx-auto font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
-      border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
-      hover:bg-white hover:text-[#006011] hover:border-[#006011]">
-      Learn more
-      <svg className="w-[31px] h-[8px] transition duration-300 fill-current text-white hover:text-[#006011]" 
-        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
-        <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="currentColor"/>
-      </svg>
-    </button>
+    <Link to="/eyfs">
+  <button className="flex mx-auto font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
+    border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
+    hover:bg-white hover:text-[#006011] hover:border-[#006011]">
+    Learn more
+    <svg className="w-[31px] h-[8px] transition duration-300 fill-current text-white hover:text-[#006011]" 
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
+      <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="currentColor"/>
+    </svg>
+  </button>
+</Link>
   </div>
 </div>
 
@@ -204,6 +210,7 @@ const Homepage = () => {
     </p>
 
     {/* Button */}
+    <Link to='/junior-school'>
     <button className="flex mx-auto font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
       border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
       hover:bg-white hover:text-[#006011] hover:border-[#006011] group">
@@ -213,6 +220,7 @@ const Homepage = () => {
         <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" />
       </svg>
     </button>
+    </Link>
   </div>
 </div>
 
@@ -228,6 +236,7 @@ const Homepage = () => {
     <p className="font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[26px] px-[15%]">A blend of Nigerian and British curricula which prepare and equip students for higher education and entry into advanced level undergraduate programmes across the world.</p>
     
     {/* Button */}
+    <Link to='/high-school'>
     <button className="flex mx-auto font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
       border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
       hover:bg-white hover:text-[#006011] hover:border-[#006011]">
@@ -237,6 +246,7 @@ const Homepage = () => {
         <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="currentColor"/>
       </svg>
     </button>
+    </Link>
   </div>
 </div>
 </div>
@@ -370,9 +380,7 @@ const Homepage = () => {
 </div>
 </div>
 
-<div className='p-[5%]'>
-<PopupMenu />
-</div>
+
 
 <div className=' bg-blue-100 p-[5%] text-center'>
 <h2 className='font-cormorant text-[#292D32] text-[64px] font-bold leading-[77.5px]'>Supreme Stories</h2>
@@ -429,6 +437,7 @@ const Homepage = () => {
       {/* Latest News Section */}
       {activeTab === "latestNews" && (
         <div>
+          
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-center w-full">
         {/* Column 1 */}
         <div className="relative h-[300px] bg-cover bg-center bg-no-repeat rounded-md p-[5%]" 

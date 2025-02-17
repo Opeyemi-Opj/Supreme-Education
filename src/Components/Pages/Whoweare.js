@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'; // ✅ Correct Import
 import Image1 from '../../assets/images/imagewhow.png'
 import Image2 from '../../assets/images/Imagels.png'
+import Arrowlft from '../../assets/images/arrow-left.png'
 
 
 const Whoweare = () => {
@@ -39,9 +40,11 @@ const Whoweare = () => {
           </div>
     
           <div className='pl-[5%] pr-[5%] pb-[5%]'>
-          <div className='flex gap-4 pt-7 pb-16 items-center'>
-      <   Link to='/' className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> HOME &gt;</Link>
-          <p className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> ABOUT US &gt; </p>
+          <div className='flex gap-2 pt-7 pb-16 items-center'>
+      <   Link to='/' className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> HOME</Link>
+         <img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
+          <p className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> ABOUT US</p>
+          <img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
           <p className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> OUR FOUNDER </p>
           </div>
     

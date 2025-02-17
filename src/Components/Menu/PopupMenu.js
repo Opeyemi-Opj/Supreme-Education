@@ -37,7 +37,7 @@ const PopupMenu = () => {
      ],
 
      [
-       { text: "EYFS", path: "/eyfs" },
+       { text: "EYFs", path: "/eyfs" },
        { text: "Junior School", path: "/junior-school" },
        { text: "High School", path: "/high-school" },
        { text: "Teachers College", path: "/teachers-college" },
@@ -149,19 +149,10 @@ const PopupMenu = () => {
 
         <div className="pl-4">
         {contentLinks.map((links, index) => (
-          <div
-            key={index}
-            className={`mt-[110px] space-y-[8%] ${
-              index === activeIndex ? "block" : "hidden"
-            }`}
-          >
+          <div key={index} className={`mt-[110px] space-y-[8%] ${ index === activeIndex ? "block" : "hidden" }`}>
             {links.map((link, idx) => (
-              <p
-                key={idx}
-                className="w-[235px] rounded-md font-raleway text-[18px] font-medium leading-[21.13px] px-5 py-3 transition duration-300 text-[#292D32] hover:bg-[#E9FBE0]"
-              >
-                <Link to={link.path}>{link.text}</Link>
-              </p>
+              <p key={idx} className="w-[235px] rounded-md font-raleway text-[18px] font-medium leading-[21.13px] px-5 py-3 transition duration-300 text-[#292D32] hover:bg-[#E9FBE0]" >
+                <Link to={link.path}>{link.text}</Link></p>
             ))}
           </div>
         ))}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'; // ✅ Correct Import
 import Image1 from '../../assets/images/image11(1).png'
+import Arrowlft from '../../assets/images/arrow-left.png'
 
 const VirtualTour = () => {
   return (
@@ -30,12 +31,14 @@ const VirtualTour = () => {
             <Link to="/contact-us" className="text-[#292D32] text-[16px] sm:text-[16px] font-medium border-b-2 border-transparent hover:text-[#DD3333] hover:border-[#DD3333] transition-all duration-300">
               Contact Us
             </Link>
-          </div>
+           </div>
 
-          <div className='px-[5%] mb-[10%]'>
-             <div className='flex gap-4 pt-7 pb-16 items-center'>
-                  <Link to='/' className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> HOME &gt;</Link>
-                  <p className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> ABOUT US &gt; </p>
+             <div className='px-[5%] mb-[10%]'>
+             <div className='flex gap-2 pt-7 pb-16 items-center'>
+                  <Link to='/' className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> HOME</Link>
+                  <img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
+                  <p className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> ABOUT US </p>
+                  <img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
                   <p className='font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]'> OUR FOUNDER </p>
               </div>
               <p  className='font-raleway text-[#292D32] text-[18px] font-medium leading-[40px] '>Take a quick Tour through Supreme Education Foundation Schools.</p>
