@@ -150,13 +150,14 @@ const Homepage = () => {
     Learn more
   </button>
 </Link>
-        </div>
+</div>
 
-  <div className="grid grid-cols-1 mr-[20%] md:grid-cols-3 gap-8 mt-[7%] ">
-  <img src={Image6} alt="/" className="w-[200px] h-[242px] mt-[-200px] " />
-  <img src={Image7} alt="/" className="w-[360px] h-[226px]" />
-  <img src={Image8} alt="/" className="w-[313px] h-[316px]" />
-  </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-[7%] sm:mx-auto md:mx-0">
+  <img src={Image6} alt="/" className="w-[150px] sm:w-[180px] md:w-[200px] h-auto sm:h-[220px] md:h-[242px] mt-[-100px] sm:mt-[-150px] md:mt-[-200px]" />
+  <img src={Image7} alt="/" className="w-[280px] sm:w-[320px] md:w-[360px] h-auto sm:h-[200px] md:h-[226px]" />
+  <img src={Image8} alt="/" className="w-[250px] sm:w-[290px] md:w-[313px] h-auto sm:h-[280px] md:h-[316px]" />
+</div>
+
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-[3%]">
   <img src={Image9} alt="/" className="w-[392px] h-[238px]" />
