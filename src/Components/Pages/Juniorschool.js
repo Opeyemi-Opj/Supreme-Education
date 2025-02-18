@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import Image1 from '../../assets/images/IMG_jun.png'
 import Image2 from '../../assets/images/IMG_5031.png'
 import Image3 from '../../assets/images/IMG_5033.png'
@@ -8,7 +9,13 @@ import Arrowlft from '../../assets/images/arrow-left.png'
 import { Link } from 'react-router-dom'; // ✅ Correct Import
 import Mapl from '../../assets/images/Map-location-marker.png'
 
-const Juniorschool = () => {
+const Juniorschool = () => { 
+
+ useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top when page loads
+  }, []);
+
+
   return (
     <div className='max-w-full'>
     <img src={Image1} alt='Our Founder' className='w-full' />

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
@@ -23,12 +23,15 @@ import Facilities from './Components/Pages/Facilities';
 import NewsEvents from './Components/Pages/NewsEvents';
 import Gallery from './Components/Pages/Gallery';
 
+
 const App = () => {
   
+
   return (
     <Router>
       <div className="relative">
-        <Header />
+
+      <Header  />
         
         {/* Routes */}
         <Routes>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import { useEffect } from 'react';
 import Image1 from '../../assets/images/image19.png'
 import Image2 from '../../assets/images/image20.png'
 import Image3 from '../../assets/images/image21.png'
@@ -15,8 +16,14 @@ import bgImage1 from '../../assets/images/Footerbgi.png'
 import Footerl from '../../assets/images/Site-logo.png'
 import Footeril from '../../assets/images/instagram.png'
 import Footerfl from '../../assets/images/facebook.png'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+  
+ useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top when page loads
+  }, []);
 
    // useForm setup
    const {
@@ -38,8 +45,9 @@ const Footer = () => {
 {/* First Column */}
 <div className="pt-[1%] flex flex-col items-start">
   {/* Logo */}
+  <Link to='/'>
   <img src={Footerl} alt="" className="w-[167px] h-[155px] max-w-[100%] md:max-w-[100%]" />
-
+  </Link>
   {/* Social Icons */}
   <div className="flex gap-5 justify-center mt-4">
     <img src={Footeril} alt="" className="w-[30px] h-[30px] md:w-[35px] md:h-[35px]" />
@@ -72,7 +80,7 @@ const Footer = () => {
       </p>
     </div>
   </div>
-  <div className="flex gap-2">
+  <div className="flex gap-2 items-center">
     <img src={Sms} alt="" className='w-[22px] h-[22px]' />
     <p className="font-raleway text-[#292D32] text-[14px] font-medium leading-[16.44px]">
       info@supremeeducation.com
@@ -110,7 +118,7 @@ const Footer = () => {
   {/* Email Subscription Form */}
   <div className="w-[311px] mt-4 ml-auto bg-transparent border border-gray-300 rounded-lg overflow-hidden shadow-md">
     <form onSubmit={handleSubmit(onSubmit)} className="flex items-center gap-2">
-      <input type="email" placeholder="Enter your email address"
+      <input type="email" placeholder="Enter your email address" 
         {...register("email", {
           required: "Email is required",
           pattern: {
@@ -118,7 +126,7 @@ const Footer = () => {
             message: "Invalid email format",
           },
         })}
-        className="flex-1 px-3 py-3 text-gray-700 bg-transparent focus:outline-none"/>
+        className="flex-1 px-3 py-3 text-white bg-transparent focus:outline-none"/>
       <button type="submit" className="bg-[#C6C6C6] p-3 transition duration-200">
         <DirectRightIcon className="w-6 h-6 text-white" />
       </button>

@@ -39,7 +39,7 @@ import  bg10  from '../../assets/images/Image.png';
 import  bg11  from '../../assets/images/image55.png';
 import  bg12  from '../../assets/images/image90.png';
 import  bg13  from '../../assets/images/Newimage55(1).png';
-import PopupMenu from '../Menu/PopupMenu';
+
 
 
 const slides = [
@@ -51,6 +51,11 @@ const slides = [
 ];
 
 const Homepage = () => {
+
+  
+   useEffect(() => {
+      window.scrollTo(0, 0); // Scrolls to the top when page loads
+    }, []);
 
 
 

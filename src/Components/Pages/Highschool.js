@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import Image1 from '../../assets/images/image58.png'
 import Image2 from '../../assets/images/Image(10).png'
 import Image3 from '../../assets/images/Image(11).png'
@@ -21,6 +22,11 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 
 const Highschool = () => {
+
+
+ useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top when page loads
+  }, []);
 
   return (
     <div className='max-w-full'>
@@ -71,7 +77,7 @@ const Highschool = () => {
          <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[40xp]'> We are a co-educational private school located within a residential estate. The school welcomed its first set of students in October 1991. The school has thrived for more than three decades and celebrates continuous improvement. Supreme Schools currently enrols over 700 students across the primary, middle, and high schools from within and outside Nigeria.<br/><span className='block mt-[7%]'></span>Our academic programs are organized on a trimester schedule. Our students offered subjects such as
          </p>
 
-    //     
+      
     <div className="flex flex-wrap md:flex-nowrap gap-1">
    <div className="w-full md:w-[30%]">
     <div className="flex items-center gap-4 mt-5 mb-3">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom'; // ✅ Correct Import
 import Image1 from '../../assets/images/image7(1).png'
 import Image2 from '../../assets/images/Image(7).png'
@@ -7,6 +8,12 @@ import  bg2  from '../../assets/images/Building-image.png';
 import Arrowlft from '../../assets/images/arrow-left.png'
 
 const OurFounder = () => {
+
+
+ useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top when page loads
+  }, []);
+
   return (
     <div className='max-w-full'>
       <img src={Image1} alt='Our Founder' className='w-full' />

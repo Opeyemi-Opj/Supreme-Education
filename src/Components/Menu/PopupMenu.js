@@ -1,16 +1,14 @@
 import React, { useState, } from 'react'; // ✅ Add useState, useEffect and useRef
 import { Link } from 'react-router-dom';
+import ReactDOM from "react-dom";
 import bg1 from '../../assets/images/image3.png';
 import bg2 from '../../assets/images/image6.png';
 import bg3 from '../../assets/images/image-8.png';
 import CloseIcon from '../../assets/icons/close.svg.svg'; // Import close icon
 
+const PopupMenu = () => {  
 
-
-const PopupMenu = () => {
-  
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
   const [activeIndex, setActiveIndex] = useState(0);
 
    const titles = [
@@ -56,10 +54,8 @@ const PopupMenu = () => {
      ],
    ];
 
-
-
-  return (
-    <div>
+  return ReactDOM.createPortal(
+    <div className='w-full shadow-md'>
         <div className='grid grid-cols-3 gap-2'>
             <div className='bg-[#F6F6F6] p-5 space-y-6 py-[30%]'>
             <div className='bg-cover bg-center h-[159.33px] flex justify-center items-center rounded-lg ' style={{ backgroundImage: `url(${bg1})` }}>
@@ -142,9 +138,23 @@ const PopupMenu = () => {
                 }`}/>
               </div>
         
-        <div className='border-l-2 border-[#1E1E1E]  content-center pl-5'>
-        <img src={CloseIcon} alt="Menu" className="w-[100px] h-[30px]" />
+
+        {/*<div className='border-l-2 border-[#1E1E1E]  content-center pl-5'>
+         {/*<img src={CloseIcon} alt="Menu" className="w-[100px] h-[30px]" /> */} 
+         {/* Close Button */}
+        {/*<button onClick={handleClose} className="absolute top-4 right-4">
+          <img src={CloseIcon} alt="Close" className="w-6 h-6 cursor-pointer" />
+        </button>*/}
+
+        {/* Side Menu */}
+      <div className="bg-white w-64 h-full p-6 shadow-lg transform transition-transform duration-300 ease-in-out translate-x-0">
+        {/* Close Button */}
+        <button className="absolute top-4 right-4">
+          <img src={CloseIcon} alt="Close" className="w-[100px] h-[30px] cursor-pointer" />
+        </button>
+
         </div>
+      
         </div>
 
         <div className="pl-4">
@@ -160,7 +170,10 @@ const PopupMenu = () => {
         </div> 
         </div>
       
-    </div>
+    </div>,
+
+  
+
   )
 }
 

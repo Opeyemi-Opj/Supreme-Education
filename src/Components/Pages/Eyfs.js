@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import Image1 from '../../assets/images/image64.png'
 import Image2 from '../../assets/images/NImage75.png'
 import Image3 from '../../assets/images/image76.png'
@@ -12,6 +13,11 @@ import Mapl from '../../assets/images/Map-location-marker.png'
 
 
 const Eyfs = () => {
+
+ useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top when page loads
+  }, []);
+
   return (
     <div className='max-w-full'>
       <img src={Image1} alt='Our Founder' className='w-full' />
