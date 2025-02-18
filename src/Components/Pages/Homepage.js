@@ -87,23 +87,23 @@ const Homepage = () => {
  
 
   return (
-    <div className=''>
-
-<div className="relative group w-full max-w-[1440px] h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[820px] m-auto ">
-  {/* Image Background */}
+    <div className='w-full'>
+      {/* Slider*/}
+      <div className="relative group w-full max-w-[1440px] h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[820px] m-auto">
+  {/* ✅ Image Background */}
   <div
     style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
     className="w-full h-full bg-center bg-cover duration-500"
   ></div>
 
-  {/* ✅ Arrows - Always Align Correctly on Mobile & Desktop */}
-  <div className="absolute top-[80%] right-10 sm:right-10 flex items-center gap-2 -translate-y-1/2">
+  {/* ✅ Arrows - Positioned 5% (Mobile) & 10% (Desktop) */}
+  <div className="absolute bottom-[15%] sm:bottom-[15%] md:bottom-[15%] lg:bottom-[15%] right-5 md:right-10 flex items-center gap-2">
     {/* Left Arrow */}
     <div
       className="bg-black/20 text-white rounded-full p-2 cursor-pointer flex justify-center items-center"
       onClick={prevSlide}
     >
-      <img src={CustomLeftIcon} alt="Left Arrow" className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8" />
+      <img src={CustomLeftIcon} alt="Left Arrow" className="w-5 sm:w-6 md:w-8 h-5 sm:h-6 md:h-8" />
     </div>
 
     {/* Right Arrow */}
@@ -111,29 +111,32 @@ const Homepage = () => {
       className="bg-black/20 text-white rounded-full p-2 cursor-pointer flex justify-center items-center"
       onClick={nextSlide}
     >
-      <img src={CustomRightIcon} alt="Right Arrow" className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8" />
+      <img src={CustomRightIcon} alt="Right Arrow" className="w-5 sm:w-6 md:w-8 h-5 sm:h-6 md:h-8" />
     </div>
   </div>
 
-  {/* ✅ Dots Positioned Inside (Mobile & Desktop) */}
-  <div className="absolute bottom-10 sm:bottom-10 md:bottom-16 right-5 sm:right-8 lg:right-20 flex gap-1 sm:gap-2 bg-black/50 p-1 sm:p-2 rounded-lg">
+  {/* ✅ Dots - Positioned 5% (Mobile) & 10% (Desktop) */}
+  <div className="absolute bottom-[5%] sm:bottom-[5%] md:bottom-[10%] lg:bottom-[7%] right-5 md:right-10 flex gap-2 bg-black/50 p-2 rounded-lg">
     {slides.map((_, slideIndex) => (
       <div
         key={slideIndex}
         onClick={() => goToSlide(slideIndex)}
         className={`cursor-pointer ${currentIndex === slideIndex ? "opacity-100" : "opacity-50"}`}
       >
-        <img src={CustomDotIcon} alt="Dot Icon" className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
+        <img src={CustomDotIcon} alt="Dot Icon" className="w-3 sm:w-4 md:w-5 h-3 sm:h-4 md:h-5" />
       </div>
     ))}
   </div>
 
-  <div className='sm:ml-[2%] sm:-mt-[100px] md:ml-[5%] md:-mt-[250px] lg:ml-[5%] xl:ml-[5%] xl:-mt-[250px]'>
-  <h1 className='text-[88px] leading-[94px] sm:text-[30px] sm:leading-[34px] font-cormorant text-[#ffffff] font-bold'>
-  A Place of Care <br /> and Excellence
-</h1>
+  {/* ✅ Title - Positioned 5% (Mobile) & 10% (Desktop) */}
+  <div className="absolute bottom-[5%] sm:bottom-[5%] md:bottom-[10%] lg:bottom-[5%] left-4 sm:left-6 md:left-10 lg:left-20">
+    <h1 className="text-[24px] sm:text-[28px] md:text-[48px] lg:text-[88px] leading-[1.1] font-cormorant text-white font-bold">
+      A Place of Care <br /> and Excellence
+    </h1>
+  </div>
 </div>
-</div>
+
+
 
       
         <div className='px-[5%] py-[5%]'>
