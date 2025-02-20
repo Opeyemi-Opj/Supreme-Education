@@ -150,33 +150,51 @@ const Footer = () => {
   <img src={Image4} alt="" className="w-[70px] h-[90px] md:w-[60px] md:h-[80px]" />
   <img src={Image5} alt="" className="w-[90px] h-[90px] md:w-[80px] md:h-[80px]" />
 </section>
-         </section>
+</section>
 
-    <section className='flex bg-[#006011] px-[5%] py-[2%] justify-between'>
-         <div className='content-center w-[35%]'>
-         <p className='font-raleway text-[#C6C5C5] text-[14px] font-medium leading-[16.44px]'>© 2023 SEF Schools. All Rights reserved.</p>
-         </div>
+<section className="flex flex-wrap bg-[#006011] px-[5%] py-[2%] justify-between md:flex-nowrap">
 
-         <div className='flex gap-0 w-[50%]'>
-         <div className=' w-[20%]    content-center justify-center'>
-          <p className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px]  .w-full pl-[5%] pr-[5%]'>Privacy Policy</p>
-         </div>
-         <div className='w-[20%] border-r-2 border-l-2 border-solid border-white px-[5%] content-center'> 
-         <p className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px]'>Sitemap</p>
-         </div>
-         <div className='border-r-2 border-solid border-white px-[5%] content-center'>
-         <p className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] pl-[5%] pr-[5%]'>Careers</p>
-         </div>
-         <div className='content-center  px-[5%] '>
-         <p className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px]'>Contact us</p>
-         </div>
-         </div>
+{/* First Column */}
+<div className="w-full md:w-[35%] text-center md:text-left content-center">
+  <p className="font-raleway text-[#C6C5C5] text-[14px] font-medium leading-[16.44px]">
+    © 2023 SEF Schools. All Rights reserved.
+  </p>
+</div>
 
-         <div className='flex gap-5  justify-end  w-[25%]'>
-            <p className='content-center font-raleway text-[#929C93] text-[14px] font-medium leading-[16.44px]'>Powered by</p>
-            <img src={EducareLogo} alt="" className='w-[114px] h-[45px]' />
-         </div>
-    </section>
+{/* Second Column */}
+<div className="w-full md:w-[50%] flex flex-wrap justify-center md:justify-start gap-2 md:gap-0 mt-3 md:mt-0">
+  <div className="w-full md:w-[20%] text-center md:text-left">
+    <p className="font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px]">
+      Privacy Policy
+    </p>
+  </div>
+  <div className="w-full md:w-[20%] border-t md:border-t-0 md:border-r-2 md:border-l-2 border-solid border-white px-[5%] text-center md:text-left">
+    <p className="font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px]">
+      Sitemap
+    </p>
+  </div>
+  <div className="w-full md:w-auto border-t md:border-t-0 md:border-r-2 border-solid border-white px-[5%] text-center md:text-left">
+    <p className="font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px]">
+      Careers
+    </p>
+  </div>
+  <div className="w-full md:w-auto px-[5%] text-center md:text-left">
+    <p className="font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px]">
+      Contact us
+    </p>
+  </div>
+</div>
+
+{/* Third Column */}
+<div className="w-full md:w-[25%] flex flex-col md:flex-row items-center md:justify-end gap-3 mt-3 md:mt-0">
+  <p className="font-raleway text-[#929C93] text-[14px] font-medium leading-[16.44px] text-center md:text-left">
+    Powered by
+  </p>
+  <img src={EducareLogo} alt="" className="w-[114px] h-[45px]" />
+</div>
+
+</section>
+
       
     </div>
   )

@@ -24,43 +24,45 @@ import NewsEvents from './Components/Pages/NewsEvents';
 import Gallery from './Components/Pages/Gallery';
 
 
+
 const App = () => {
-  
 
-  return (
-    <Router>
-      <div className="relative">
 
-      <Header  />
-        
-        {/* Routes */}
-        <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/our-founder" element={<OurFounder />} />
-        <Route path="/our-ceo" element={<OurCEO />} />
-        <Route path="/who-we-are" element={<Whoweare />} />
-        <Route path="/virtual-tour" element={<VirtualTour />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/how-to-apply" element={<Howtoapply />} />
-        <Route path="/enquiry" element={<Enquiry />} />
-        <Route path="/faqs" element={<Faqs />} />
-        <Route path="/eyfs" element={<Eyfs />} />
-        <Route path="/junior-school" element={<Juniorschool />} />
-        <Route path="/high-school" element={<Highschool />} />
-        <Route path="/teachers-college" element={<Teacherscollege />} />
-        <Route path="/academic-calendar" element={<Academiccalendar />} />
-        <Route path="/School-curriculum" element={<Schoolcurriculum />} />
-        <Route path="/boarding-school" element={<Boardingschool />} />
-        <Route path="/co-curricular-activities" element={<Cocurricularactivities />} />
-        <Route path="/facilities" element={<Facilities />} />
-        <Route path="/news-events" element={<NewsEvents />} />
-        <Route path="/gallery" element={<Gallery />} />
-        </Routes>
+return (
+<Router>
+<div className="relative">
 
-        <Footer />
-      </div>
-    </Router>
-  );
+
+<Header  />
+
+{/* Routes */}
+<Routes>
+<Route path="/" element={<Homepage />} />
+<Route path="/our-founder" element={<OurFounder />} />
+<Route path="/our-ceo" element={<OurCEO />} />
+<Route path="/who-we-are" element={<Whoweare />} />
+<Route path="/virtual-tour" element={<VirtualTour />} />
+<Route path="/contact-us" element={<ContactUs />} />
+<Route path="/how-to-apply" element={<Howtoapply />} />
+<Route path="/enquiry" element={<Enquiry />} />
+<Route path="/faqs" element={<Faqs />} />
+<Route path="/eyfs" element={<Eyfs />} />
+<Route path="/junior-school" element={<Juniorschool />} />
+<Route path="/high-school" element={<Highschool />} />
+<Route path="/teachers-college" element={<Teacherscollege />} />
+<Route path="/academic-calendar" element={<Academiccalendar />} />
+<Route path="/School-curriculum" element={<Schoolcurriculum />} />
+<Route path="/boarding-school" element={<Boardingschool />} />
+<Route path="/co-curricular-activities" element={<Cocurricularactivities />} />
+<Route path="/facilities" element={<Facilities />} />
+<Route path="/news-events" element={<NewsEvents />} />
+<Route path="/gallery" element={<Gallery />} />
+</Routes>
+
+<Footer />
+</div>
+</Router>
+);
 };
 
 export default App;

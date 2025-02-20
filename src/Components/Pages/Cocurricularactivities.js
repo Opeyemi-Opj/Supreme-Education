@@ -10,7 +10,7 @@ import Mapl from '../../assets/images/Map-location-marker.png'
 
 
 const Cocurricularactivities = () => {
-  return (
+return (
 <div className='max-w-full'>
 
 <img src={Image1} alt='Our Founder' className='w-full' />
@@ -35,19 +35,19 @@ Facilities
 
 <div className='pl-[5%] pr-[5%]'>
 <div className="flex flex-wrap gap-2 pt-7 pb-16 items-center text-center md:text-left">
-  <Link to="/" className="font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]">
-    HOME
-  </Link>
-  <img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
+<Link to="/" className="font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]">
+HOME
+</Link>
+<img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
 
-  <p className="font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]">
-    STUDENT LIFE
-  </p>
-  <img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
+<p className="font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px]">
+STUDENT LIFE
+</p>
+<img src={Arrowlft} alt="" className="w-[14px] h-[14px]" />
 
-  <p className="font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px] text-center md:text-left">
-    CO-CURRICULAR-ACTIVITIES
-  </p>
+<p className="font-raleway text-[#292D32] text-[14px] font-bold leading-[16.44px] text-center md:text-left">
+CO-CURRICULAR-ACTIVITIES
+</p>
 </div>
 
 
@@ -61,59 +61,59 @@ Facilities
 </div>
 
 <div className="flex flex-col md:flex-row gap-6 px-[5%]">
-    {/* Second Column - Smaller */}
+{/* Second Column - Smaller */}
 <div className="w-full md:w-[35%] bg-white">
 <div className="">
-    
-         <div className='flex items-center gap-4 mt-5 mb-3 '>
-           <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
-           <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
-           JETS
-           </p>
-         </div>
 
-         <div className='flex items-center gap-4  mb-3 '>
-           <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
-           <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
-           ICT
-           </p>
-         </div>
+<div className='flex items-center gap-4 mt-5 mb-3 '>
+  <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
+  <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
+  JETS
+  </p>
+</div>
 
-         <div className='flex items-center gap-4  mb-3 '>
-           <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
-           <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
-           Math
-           </p>
-         </div>
+<div className='flex items-center gap-4  mb-3 '>
+  <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
+  <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
+  ICT
+  </p>
+</div>
 
-         <div className='flex items-center gap-4  mb-3 '>
-           <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
-           <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
-           Literary & Debating
-           </p>
-         </div>
-         
-         <div className='flex items-center gap-4  mb-3 '>
-           <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
-           <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
-           Chef
-           </p>
-         </div>
+<div className='flex items-center gap-4  mb-3 '>
+  <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
+  <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
+  Math
+  </p>
+</div>
 
-         <div className='flex items-center gap-4  mb-3 '>
-           <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
-           <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
-           Board games
-           </p>
-         </div>
+<div className='flex items-center gap-4  mb-3 '>
+  <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
+  <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
+  Literary & Debating
+  </p>
+</div>
 
-         <div className='flex items-center gap-4  mb-6 '>
-           <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
-           <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
-           amongst others
-           </p>
-         </div>
-        </div>
+<div className='flex items-center gap-4  mb-3 '>
+  <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
+  <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
+  Chef
+  </p>
+</div>
+
+<div className='flex items-center gap-4  mb-3 '>
+  <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
+  <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
+  Board games
+  </p>
+</div>
+
+<div className='flex items-center gap-4  mb-6 '>
+  <img src={Mapl} alt="" className="w-[40px] h-[40px]" />
+  <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[21.13px]'>
+  amongst others
+  </p>
+</div>
+</div>
 </div>
 
 {/* First Column - Larger */}
@@ -124,29 +124,29 @@ Facilities
 
 <div className=' px-[5%] mt-[4%]'>
 <p className='font-raleway text-[#292D32] text-[18px] font-medium leading-[40px] pr-[40%]'>We provide Coding and Robotics classes for our students in order to equip them for the ever developing world of technology.
-    There are several opportunities for field trips within and outside Nigeria to enable students explore wider horizons that impact their learning.</p>
+There are several opportunities for field trips within and outside Nigeria to enable students explore wider horizons that impact their learning.</p>
 </div>
 
 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 p-[5%] mb-[6%]">
-  {/* Column 1 */}
-  <div className=" rounded-md flex items-center justify-center">
-    <img src={Image3} alt="/" className="/" />
-  </div>
+{/* Column 1 */}
+<div className=" rounded-md flex items-center justify-center">
+<img src={Image3} alt="/" className="/" />
+</div>
 
-  {/* Column 2 */}
-  <div className=" rounded-md flex items-center justify-center">
-    <img src={Image4} alt="/" className="/" />
-  </div>
+{/* Column 2 */}
+<div className=" rounded-md flex items-center justify-center">
+<img src={Image4} alt="/" className="/" />
+</div>
 
-  {/* Column 3 */}
-  <div className=" rounded-md flex items-center justify-center">
-   <img src={Image5} alt="/" className="w-full" />
-  </div>
+{/* Column 3 */}
+<div className=" rounded-md flex items-center justify-center">
+<img src={Image5} alt="/" className="w-full" />
+</div>
 </div>
 
 
 </div>
-  )
+)
 }
 
 export default Cocurricularactivities

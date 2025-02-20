@@ -1,12 +1,15 @@
 import React, { useState, } from 'react'; // ✅ Add useState, useEffect and useRef
 import { Link } from 'react-router-dom';
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import bg1 from '../../assets/images/image3.png';
 import bg2 from '../../assets/images/image6.png';
 import bg3 from '../../assets/images/image-8.png';
 import CloseIcon from '../../assets/icons/close.svg.svg'; // Import close icon
 
-const PopupMenu = () => {  
+const PopupMenu = ({ onClose }) => {  
+  
+  
+
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -54,10 +57,10 @@ const PopupMenu = () => {
      ],
    ];
 
-  return ReactDOM.createPortal(
-    <div className='w-full shadow-md'>
+  return (
+    <div className='fixed inset-0 w-full shadow-md bg-white'>
         <div className='grid grid-cols-3 gap-2'>
-            <div className='bg-[#F6F6F6] p-5 space-y-6 py-[30%]'>
+            <div className='bg-[#F6F6F6] p-5 space-y-6 py-[10%]'>
             <div className='bg-cover bg-center h-[159.33px] flex justify-center items-center rounded-lg ' style={{ backgroundImage: `url(${bg1})` }}>
             <button className="flex font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
         border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
@@ -138,28 +141,20 @@ const PopupMenu = () => {
                 }`}/>
               </div>
         
-
-        {/*<div className='border-l-2 border-[#1E1E1E]  content-center pl-5'>
-         {/*<img src={CloseIcon} alt="Menu" className="w-[100px] h-[30px]" /> */} 
-         {/* Close Button */}
-        {/*<button onClick={handleClose} className="absolute top-4 right-4">
-          <img src={CloseIcon} alt="Close" className="w-6 h-6 cursor-pointer" />
-        </button>*/}
-
-        {/* Side Menu */}
-      <div className="bg-white w-64 h-full p-6 shadow-lg transform transition-transform duration-300 ease-in-out translate-x-0">
-        {/* Close Button */}
-        <button className="absolute top-4 right-4">
+          {/* Side Menu */}
+        <div className='border-l-2 border-[#1E1E1E]  content-center pl-5'>
+          {/* Close Button */}
+        <button onClick= {onClose} className="">
           <img src={CloseIcon} alt="Close" className="w-[100px] h-[30px] cursor-pointer" />
         </button>
-
+        
         </div>
       
         </div>
 
         <div className="pl-4">
         {contentLinks.map((links, index) => (
-          <div key={index} className={`mt-[110px] space-y-[8%] ${ index === activeIndex ? "block" : "hidden" }`}>
+          <div key={index} className={`mt-[30px] space-y-[8%] ${ index === activeIndex ? "block" : "hidden" }`}>
             {links.map((link, idx) => (
               <p key={idx} className="w-[235px] rounded-md font-raleway text-[18px] font-medium leading-[21.13px] px-5 py-3 transition duration-300 text-[#292D32] hover:bg-[#E9FBE0]" >
                 <Link to={link.path}>{link.text}</Link></p>
@@ -169,8 +164,7 @@ const PopupMenu = () => {
       </div>
         </div> 
         </div>
-      
-    </div>,
+    </div>
 
   
 

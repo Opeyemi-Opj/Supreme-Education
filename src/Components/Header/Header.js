@@ -7,16 +7,17 @@ import VisitIcon from "../../assets/icons/map.svg";
 import ApplyIcon from "../../assets/icons/message-edit.svg";  
 import Logo from "../../assets/images/Site-logo.png";
 import { Link } from 'react-router-dom';
+import PopupMenu from '../../Components/Menu/PopupMenu';
 
-const Header = ({ onMenuClick }) => {
+const Header = () => {
 
-  //const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const [showPopupMenu, setShowPopupMenu] = useState(false);
+
 
 const [isSearchOpen, setIsSearchOpen] = useState(false);
 const [showFirstHeader, setShowFirstHeader] = useState(true);
 const [showSecondHeader, setShowSecondHeader] = useState(false);
-
-
 
 // Handle scroll to show/hide headers
 const handleScroll = () => {
@@ -39,7 +40,7 @@ return (
 <section className="fixed top-0 left-0 w-full z-50">
 {/* Desktop and Tablet Header - Hide when scrolling */}
 {showFirstHeader && (
-<div className="hidden md:flex flex-col w-full">
+<div className=" hidden md:flex flex-col w-full">
 {/* Top Section (Contact & Search) */}
 <div className="bg-white px-[5%] py-[1.5%] flex justify-between items-center">
 {/* Left Section (Phone & Email) */}
@@ -73,19 +74,17 @@ return (
       className={`absolute right-0 top-0 h-10 max-w-0 px-4 border border-gray-300 rounded-full transition-all duration-300 ${isSearchOpen ? "max-w-[120px] opacity-100 px-4" : "max-w-0 opacity-0 px-0"}`}
     />
   </div>
-
-
-  <div className="border-l-2 border-solid border-black pl-4 ml-3">
-{/* Menu Icon */}
-<button onClick={onMenuClick} className="cursor-pointer">
-        <img src={MenuIcon} alt="Menu" className="[100px] h-[30px]" />
-      </button>
-
-
-
-  </div>
+  
+  <div className="relative z-50 border-l-2 border-solid border-black pl-4 ml-3">
+  <button onClick={() => setShowPopupMenu(true)} className="cursor-pointer relative z-50">
+    <img src={MenuIcon} alt="Menu" className="w-[100px] h-[30px]" />
+  </button>
+  {showPopupMenu && <PopupMenu onClose={() => setShowPopupMenu(false)} />}
+</div>
+  
 </div> 
 </div> 
+
 
 {/* Centered Logo Section */}
 <div className="flex justify-center mt-[-85px] bg-transparent md:ml-0 tablet:ml-[25%]">
@@ -95,6 +94,8 @@ return (
 </div>
 </div>
 )}
+
+
 
 {/* Second Header - Sticky on Scroll */}
 {showSecondHeader && (
@@ -151,12 +152,12 @@ return (
     />
   </div>
 
- <div className="flex justify-between items-center p-4 border-l-2 border-solid border-black ml-3">
+    <div className="flex justify-between items-center p-4 border-l-2 border-solid border-black ml-3">
       {/* Menu Icon */}
-      <button onClick={onMenuClick} className="cursor-pointer">
-        <img src={MenuIcon} alt="Menu" className="[100px] h-[30px]" />
+      <button onClick={()=> setShowPopupMenu(true)} className="cursor-pointer">
+        <img src={MenuIcon} alt="Menu" className="w-[100px] h-[30px]" />
       </button>
-
+      {showPopupMenu && <PopupMenu onClose={() => setShowPopupMenu(false)}/>}
 </div>
 </div>
 
@@ -186,7 +187,11 @@ return (
 
 {/* Menu Icon */}
 <div className="border-l-2 border-solid border-black pl-4 ml-3">
-<img src={MenuIcon} alt="Menu" className="w-[40px] h-[40px]" />
+{/* Menu Icon */}
+<button onClick={()=> setShowPopupMenu(true)} className="cursor-pointer">
+        <img src={MenuIcon} alt="Menu" className="w-[40px] h-[40px]" />
+      </button>
+      {showPopupMenu && <PopupMenu onClose={() => setShowPopupMenu(false)}/>}
 </div>
 </div>
 </div>
