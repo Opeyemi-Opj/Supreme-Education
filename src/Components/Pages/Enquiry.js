@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom'; // ✅ Correct Import
 import { useForm } from 'react-hook-form';
 import Image1 from '../../assets/images/image73.png'
@@ -7,6 +8,12 @@ import  bg1  from '../../assets/images/Creed.png';
 import  bg2  from '../../assets/images/Building-image.png';
 
 const Enquiry = () => {
+
+   
+  useEffect(() => {
+  window.scrollTo(0, 0); // Scrolls to the top when page loads
+  }, []);
+  
 
     const {
         register,

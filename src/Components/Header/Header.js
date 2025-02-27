@@ -75,8 +75,8 @@ return (
     />
   </div>
   
-  <div className="relative z-50 border-l-2 border-solid border-black pl-4 ml-3">
-  <button onClick={() => setShowPopupMenu(true)} className="cursor-pointer relative z-50">
+  <div className="relative z-50 border-l-2 border-solid border-black pl-4 ">
+  <button onClick={() => setShowPopupMenu(true)} className="cursor-pointer relative z-100">
     <img src={MenuIcon} alt="Menu" className="w-[100px] h-[30px]" />
   </button>
   {showPopupMenu && <PopupMenu onClose={() => setShowPopupMenu(false)} />}
@@ -99,7 +99,7 @@ return (
 
 {/* Second Header - Sticky on Scroll */}
 {showSecondHeader && (
-<div className="hidden md:flex w-full bg-white sticky top-0 h-[107px] shadow-md">
+<div className="hidden md:flex w-full bg-white sticky top-0 h-[95px] shadow-md">
 {/* Two Equal Columns */}
 <div className="w-full flex justify-between px-[5%] py-[1.5%]">
 {/* Left Column */}
@@ -152,7 +152,7 @@ return (
     />
   </div>
 
-    <div className="flex justify-between items-center p-4 border-l-2 border-solid border-black ml-3">
+    <div className="pl-5 border-l-2 border-solid border-black">
       {/* Menu Icon */}
       <button onClick={()=> setShowPopupMenu(true)} className="cursor-pointer">
         <img src={MenuIcon} alt="Menu" className="w-[100px] h-[30px]" />
@@ -168,11 +168,11 @@ return (
 
 
 {/* Mobile Header */}
-<div className="flex md:hidden px-5 py-3 items-center justify-between bg-white">
+<div className="flex md:hidden px-5 py-1 items-center justify-between bg-white">
 {/* Left Section (Logo) */}
 <div className="flex items-center">
 <Link to='/'>
-<img src={Logo} alt="Site Logo" className="w-[70px] h-[70px]" />
+<img src={Logo} alt="Site Logo" className="w-[50px] h-[50px]" />
 </Link>
 </div>
 

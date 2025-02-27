@@ -9,7 +9,7 @@ import Arrowlft from '../../assets/images/arrow-left.png'
 
 const OurFounder = () => {
 
-
+    
 useEffect(() => {
 window.scrollTo(0, 0); // Scrolls to the top when page loads
 }, []);

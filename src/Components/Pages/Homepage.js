@@ -39,7 +39,8 @@ import  bg10  from '../../assets/images/Image.png';
 import  bg11  from '../../assets/images/image55.png';
 import  bg12  from '../../assets/images/image90.png';
 import  bg13  from '../../assets/images/Newimage55(1).png';
-
+import ImagePopup from '../../Components/ImagePopup'; // Corrected path
+import myImage from '../../assets/images/image17(2).png'; // Renamed image file
 
 
 const slides = [
@@ -135,6 +136,12 @@ const Homepage = () => {
     </h1>
   </div>
 </div>
+
+  <div className="relative">
+  
+      {/* Auto-show Image Popup with a local image */}
+      <ImagePopup imageUrl={myImage} delay={1000} />
+    </div>
 
         <div className='px-[5%] py-[5%]'>
         <div className='text-center space-y-[3%]'>

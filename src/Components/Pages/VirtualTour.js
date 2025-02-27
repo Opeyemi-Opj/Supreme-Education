@@ -1,9 +1,16 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom'; // ✅ Correct Import
 import Image1 from '../../assets/images/image11(1).png'
 import Arrowlft from '../../assets/images/arrow-left.png'
 
 const VirtualTour = () => {
+
+
+useEffect(() => {
+window.scrollTo(0, 0); // Scrolls to the top when page loads
+}, []);
+
   return (
     <div className='max-w-full'>
           <img src={Image1} alt='Our Founder' className='w-full' />
