@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import XIcon from '../assets/icons/x.svg';
 
 const ImagePopup = ({ imageUrl, delay = 2000 }) => {
 
@@ -17,11 +18,11 @@ const ImagePopup = ({ imageUrl, delay = 2000 }) => {
     {showPopup && (
       <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
         <div className="relative bg-white p-4 rounded-lg shadow-lg max-w-md">
-          <button
-            className="absolute top-[-50px] text-[#334155]  rounded-full p-2 bg-white right-2"
-            onClick={() => setShowPopup(false)}>
-            ✖
-          </button>
+        <button
+  className="absolute top-[-50px] text-[#334155] rounded-full p-2 bg-white right-2"
+  onClick={() => setShowPopup(false)}>
+  <img src={XIcon} alt="Close" className="w-[24px] h-[24px]" />
+</button>
           <img
             src={imageUrl} 
             alt="Popup"

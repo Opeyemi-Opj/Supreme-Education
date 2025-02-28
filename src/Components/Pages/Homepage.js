@@ -143,11 +143,11 @@ const Homepage = () => {
       <ImagePopup imageUrl={myImage} delay={1000} />
     </div>
 
-        <div className='px-[5%] py-[5%]'>
-        <div className='text-center space-y-[3%]'>
-             <h1 className='font-cormorant text-[#292D32] text-[72px] font-bold leading-[87.19px] '>Welcome to Supreme</h1>
-             <p class="font-raleway text-[#292D32] text-[18px] font-medium leading-[40px] pl-[17%] pr-[17%]">Supreme Education Foundation School is a centre of excellence designed to provide world-class education in an exciting learning environment for students between the ages of 3 months to 18 years. </p> 
-             <Link to="/our-founder">
+<div className='px-[5%] py-[5%]'>
+<div className='text-center space-y-[3%]'>
+<h1 className='font-cormorant text-[#292D32] text-[72px] font-bold leading-[87.19px] '>Welcome to Supreme</h1>
+<p class="font-raleway text-[#292D32] text-[18px] font-medium leading-[40px] pl-[17%] pr-[17%]">Supreme Education Foundation School is a centre of excellence designed to provide world-class education in an exciting learning environment for students between the ages of 3 months to 18 years. </p> 
+<Link to="/our-founder">
   <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
     bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
     hover:bg-[#C8352E]'>
@@ -156,20 +156,21 @@ const Homepage = () => {
 </Link>
 </div>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-[7%] sm:mx-auto md:mx-0">
-  <img src={Image6} alt="/" className="w-[150px] sm:w-[180px] md:w-[200px] h-auto sm:h-[220px] md:h-[242px] mt-[-100px] sm:mt-[-150px] md:mt-[-200px]" />
-  <img src={Image7} alt="/" className="w-[280px] sm:w-[320px] md:w-[360px] h-auto sm:h-[200px] md:h-[226px]" />
-  <img src={Image8} alt="/" className="w-[250px] sm:w-[290px] md:w-[313px] h-auto sm:h-[280px] md:h-[316px]" />
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-[7%] items-end sm:mx-auto md:mx-0">
+<img src={Image6} alt="/" className="w-full sm:w-[200px] h-auto sm:h-[242px] mt-[100px] lg:mt-[-110px]" />
+  <img src={Image7} alt="/" className="w-full sm:w-[320px] md:w-[360px] h-auto sm:h-[200px] md:h-[226px]" />
+  <img src={Image8} alt="/" className="w-full sm:w-[290px] md:w-[313px] h-auto sm:h-[280px] md:h-[316px]" />
 </div>
 
 
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-[3%]">
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-[3%]">
   <img src={Image9} alt="/" className="w-[392px] h-[238px]" />
   <img src={Image10} alt="/" className="w-[375px] h-316px]" />
   <img src={Image11} alt="/" className="w-[464px] h-[238px]" />
 </div>
 </div>
-//
+
 <div className="bg-[#326F14] px-[5%] py-[5%]">
   {/* First Section */}
   <div className="flex flex-col gap-10 sm:flex-row sm:gap-20 mb-10 sm:mb-20">
@@ -439,11 +440,11 @@ const Homepage = () => {
            {/* X (Twitter) Link */}
       <a href="https://x.com/i/flow/login?redirect_after_login=%2Fiamsupremesch" target="_blank" 
         rel="noopener noreferrer">
-        <img src={Image19} alt="X (Twitter)" className="w-[100px] h-[40px] cursor-pointer" /></a>
+        <img src={Image19} alt="X (Twitter)" className="w-[100px] h-[40px] cursor-pointer mt-[-16px]" /></a>
       {/* YouTube Link */}
       <a href="https://www.youtube.com/channel/UCS8z8ciwQSZmxAwTyxk2bOQ" target="_blank" 
         rel="noopener noreferrer">
-        <img src={Image20} alt="YouTube" className="w-[90px] h-[45px] cursor-pointer" /></a>
+        <img src={Image20} alt="YouTube" className="w-[90px] h-[45px] cursor-pointer mt-[-16px]" /></a>
       </div>
 
       {/* Latest News Section */}
@@ -484,10 +485,11 @@ const Homepage = () => {
       </div>
       
       <div className="flex justify-center items-center w-full mt-10">
-        <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
+        <Link to='/news-events'><button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
                bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
               hover:bg-[#C8352E]'>Learn more 
         </button>
+        </Link>
       </div>
       </div>
       )}
@@ -525,10 +527,11 @@ const Homepage = () => {
           </div>
          </div>
          <div className="flex justify-center items-center w-full mt-10">
-          <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
+          <Link to='/news-events'><button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
                  bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
                 hover:bg-[#C8352E]'>Find us on Facebook 
           </button>
+          </Link>
         </div>
          </div>
       )}
@@ -566,17 +569,16 @@ const Homepage = () => {
         </div>
        </div>
        <div className="flex justify-center items-center w-full mt-10">
-        <button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
+        <Link to='/news-events'><button className='font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
                bg-[#006011] border border-[#C6C5C5] rounded-[8px] px-[24px] py-[12px] items-center gap-5 transition duration-300
               hover:bg-[#C8352E]'>Follow us on Instagram
         </button>
-       
+        </Link>
         
       </div>
        </div>
       )}
     </div>
-
 
     </div>
   )

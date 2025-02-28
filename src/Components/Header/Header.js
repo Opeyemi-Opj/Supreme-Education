@@ -163,8 +163,7 @@ return (
 
 </div>
 </div>
-</div>
-)}
+</div>)}
 
 
 {/* Mobile Header */}

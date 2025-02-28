@@ -89,32 +89,46 @@ return (
 {/* Third Column */}
 <div className="w-full md:w-[916px] h-auto bg-cover bg-center pt-[5%] pb-[5%] pr-[5%] text-left md:text-right sm:pt-[5%] sm:pb-[5%] sm:px-[5%]" style={{ backgroundImage: `url(${bgImage1})` }}>
 
-
-<div className="flex gap-10 ml-auto w-max pb-[5%] sm:w-full sm:justify-end">
+<div className="flex flex-wrap gap-2 sm:gap-10 ml-auto w-max pb-[5%] sm:w-full sm:justify-end">
   {/* Buttons */}
-<Link to='/enquiry'><button className="flex font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
-border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
-hover:bg-white hover:text-[#006011] hover:border-[#006011] group">Enquire
-<svg className="w-[31px] h-[8px] transition duration-300 fill-current text-white group-hover:text-[#006011]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
-<path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="currentColor"/>
-</svg>
-</button></Link>
+  <Link to='/enquiry'>
+    <button className="flex font-raleway text-[#FFFFFF] text-[10px] sm:text-[14px] font-medium leading-[16.44px] 
+      border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
+      hover:bg-white hover:text-[#006011] hover:border-[#006011] group">
+      Enquire
+      <svg className="w-[20px] h-[5px] sm:w-[31px] sm:h-[8px] transition duration-300 fill-current text-white group-hover:text-[#006011]" 
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
+        <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" 
+          fill="currentColor"/>
+      </svg>
+    </button>
+  </Link>
 
-<Link to='/how-to-apply'><button className="flex font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
-border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
-hover:bg-white hover:text-[#006011] hover:border-[#006011] group">Apply
-<svg className="w-[31px] h-[8px] transition duration-300 fill-current text-white group-hover:text-[#006011]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
-<path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="currentColor"/>
-</svg>
-</button></Link>
+  <Link to='/how-to-apply'>
+    <button className="flex font-raleway text-[#FFFFFF] text-[10px] sm:text-[14px] font-medium leading-[16.44px] 
+      border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
+      hover:bg-white hover:text-[#006011] hover:border-[#006011] group">
+      Apply
+      <svg className="w-[20px] h-[5px] sm:w-[31px] sm:h-[8px] transition duration-300 fill-current text-white group-hover:text-[#006011]" 
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
+        <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" 
+          fill="currentColor"/>
+      </svg>
+    </button>
+  </Link>
 
-<Link to='/virtual-tour'><button className="flex font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 
-border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
-hover:bg-white hover:text-[#006011] hover:border-[#006011] group">Visit
-<svg className="w-[31px] h-[8px] transition duration-300 fill-current text-white group-hover:text-[#006011]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
-<path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="currentColor"/>
-</svg>
-</button></Link>
+  <Link to='/virtual-tour'>
+    <button className="flex font-raleway text-[#FFFFFF] text-[10px] sm:text-[14px] font-medium leading-[16.44px] 
+      border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
+      hover:bg-white hover:text-[#006011] hover:border-[#006011] group">
+      Visit
+      <svg className="w-[20px] h-[5px] sm:w-[31px] sm:h-[8px] transition duration-300 fill-current text-white group-hover:text-[#006011]" 
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
+        <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" 
+          fill="currentColor"/>
+      </svg>
+    </button>
+  </Link>
 </div>
 
 <h1 className="font-raleway text-white text-[14px] font-bold leading-[16.44px] mt-4 text-right">
@@ -191,14 +205,15 @@ hover:bg-white hover:text-[#006011] hover:border-[#006011] group">Visit
 </div>
 </div>
 
-
 {/* Third Column */}
-<div className="w-full md:w-[25%] flex md:flex-row flex-col items-start md:justify-end gap-3 mt-3 md:mt-0 md:text-left text-right">
-<p className="font-raleway text-[#929C93] text-[14px] font-medium leading-[16.44px]">
-  Powered by
-</p>
-<img src={EducareLogo} alt="" className="w-[114px] h-[45px]" />
+<div className="w-full md:w-[25%] flex items-center justify-end gap-3 mt-3 md:mt-0 text-right sm:justify-start">
+  <p className="font-raleway text-[#929C93] text-[14px] font-medium leading-[16.44px]">
+    Powered by
+  </p>
+  <img src={EducareLogo} alt="Educare Logo" className="w-[114px] h-[45px]" />
 </div>
+
+
 </section>
 
 </div>

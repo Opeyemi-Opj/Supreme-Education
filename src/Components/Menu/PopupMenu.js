@@ -45,8 +45,8 @@ const PopupMenu = ({ onClose }) => {
     ],
     [
       { text: "How to Apply", path: "/how-to-apply" },
-      { text: "Registration form", path: "/registration-form" },
-      { text: "SMC registration form", path: "/smc-registration-form" },
+      { text: "Registration form", path: "/" },
+      { text: "SMC registration form", path: "/" },
       { text: "Enquiry", path: "/enquiry" },
       { text: "FAQs", path: "/faqs" },
     ],
@@ -123,15 +123,12 @@ const PopupMenu = ({ onClose }) => {
           setActiveIndex(null); // Hide the previously clicked title when hovering
         }}
         onMouseLeave={() => setHoverIndex(null)}
-        onClick={() => setActiveIndex(index)}
-      >
+        onClick={() => setActiveIndex(index)}>
         {title}
       </h2>
     ))}
   </div>
 </div>
-
-
 
       {/* Right Column (Content Links) */}
       <div className="pt-10 bg-[#FFFFF]">
