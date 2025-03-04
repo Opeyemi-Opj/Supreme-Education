@@ -189,8 +189,7 @@ const Homepage = () => {
         backgroundImage: `url(${bg1})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}
-    >
+      }}>
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-[#00000066] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
@@ -202,14 +201,18 @@ const Homepage = () => {
         <p className="font-raleway text-white text-[14px] font-medium leading-[26px] px-[10%] sm:px-[15%]">
         EYFS at Supreme Education Foundation School ensures that every child’s individual needs are met, fostering holistic development across various domains—physical, social, emotional, and cognitive.
         </p>
-        <Link to="/eyfs">
-          <button className="flex mx-auto font-raleway text-white text-[14px] font-medium leading-[16.44px] border border-[#C6C5C5] rounded-[8px] px-[20px] py-[10px] sm:px-[25px] sm:py-[15px] items-center gap-5 transition duration-300 hover:bg-white hover:text-[#006011] hover:border-[#006011]">
-            Learn more
-            <svg className="w-[25px] sm:w-[31px] h-[8px] transition duration-300 fill-current text-white hover:text-[#006011]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
-              <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" fill="currentColor"/>
-            </svg>
-          </button>
-        </Link>
+        <Link to='/eyfs'>
+      <button className="flex font-raleway text-[#FFFFFF] text-[10px] sm:text-[14px] font-medium leading-[16.44px] 
+        border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
+        hover:bg-white hover:text-[#006011] hover:border-[#006011] group">
+        Learn more
+        <svg className="w-[20px] h-[5px] sm:w-[31px] sm:h-[8px] transition duration-300 fill-current"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
+          <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" 
+            fill="currentColor"/>
+        </svg>
+      </button>
+    </Link>
       </div>
     </div>
   </div>
@@ -231,36 +234,52 @@ const Homepage = () => {
         <p className="font-raleway text-white text-[18px] font-medium leading-[26px] px-[10%] sm:px-[15%]">
         Imagination and creativity are two of the greatest gifts children have. Our children’s views and ideas are sought at every opportunity, as we attach a great deal of importance to developing confident children 
         </p>
-        <Link to="/junior-school">
-          <button className="flex mx-auto font-raleway text-white text-[14px] font-medium leading-[16.44px] border border-[#C6C5C5] rounded-[8px] px-[20px] py-[10px] sm:px-[25px] sm:py-[15px] items-center gap-5 transition duration-300 hover:bg-white hover:text-[#006011] hover:border-[#006011]">
-            Learn more
-          </button>
-        </Link>
-      </div>
-    </div>
+        <Link to='/junior-school'>
+      <button className="flex font-raleway text-[#FFFFFF] text-[10px] sm:text-[14px] font-medium leading-[16.44px] 
+        border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
+        hover:bg-white hover:text-[#006011] hover:border-[#006011] group">
+        Learn more
+        <svg className="w-[20px] h-[5px] sm:w-[31px] sm:h-[8px] transition duration-300 fill-current"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
+          <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" 
+            fill="currentColor"/>
+        </svg>
+      </button>
+    </Link>
+  </div>
+  </div>
 
-    {/* High School */}
-    <div className="w-full sm:w-1/2 h-[300px] sm:h-[422px] rounded-md text-center grid place-items-center group overflow-hidden relative"
-      style={{ backgroundImage: `url(${bg3})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-      
-      {/* Background Overlay */}
-      <div className="absolute inset-0 bg-[#00000066] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+   {/* High School */}
+<div className="w-full sm:w-1/2 h-[300px] sm:h-[422px] rounded-md text-center grid place-items-center group overflow-hidden relative"
+  style={{ backgroundImage: `url(${bg3})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+  {/* Background Overlay */}
+  <div className="absolute inset-0 bg-[#00000066] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+  
+  {/* Content */}
+  <div className="relative w-full px-5 flex flex-col items-center space-y-[5%] transition-transform duration-[1.2s] ease-in-out translate-y-[100%] group-hover:translate-y-0">
+    <h2 className="font-cormorant text-white text-[28px] sm:text-[40px] font-medium leading-[35px] sm:leading-[48.44px]">
+      High School
+    </h2>
+    <p className="font-raleway text-white text-[18px] font-medium leading-[26px] px-[10%] sm:px-[15%]">
+      A blend of Nigerian and British curricula which prepare and equip students for higher education and entry into advanced level undergraduate programmes across the world.
+    </p>
+    
+    {/* Button */}
+    <Link to='/high-school'>
+      <button className="flex font-raleway text-[#FFFFFF] text-[10px] sm:text-[14px] font-medium leading-[16.44px] 
+        border border-[#C6C5C5] rounded-[8px] px-[25px] py-[15px] items-center gap-5 transition duration-300
+        hover:bg-white hover:text-[#006011] hover:border-[#006011] group">
+        Learn more
+        <svg className="w-[20px] h-[5px] sm:w-[31px] sm:h-[8px] transition duration-300 fill-current"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 8">
+          <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0V4.5Z" 
+            fill="currentColor"/>
+        </svg>
+      </button>
+    </Link>
+  </div>
+</div>
 
-      {/* Content */}
-      <div className="relative w-full px-5 flex flex-col items-center space-y-[5%] transition-transform duration-[1.2s] ease-in-out translate-y-[100%] group-hover:translate-y-0">
-        <h2 className="font-cormorant text-white text-[28px] sm:text-[40px] font-medium leading-[35px] sm:leading-[48.44px]">
-          High School
-        </h2>
-        <p className="font-raleway text-white text-[18px] font-medium leading-[26px] px-[10%] sm:px-[15%]">
-        A blend of Nigerian and British curricula which prepare and equip students for higher education and entry into advanced level undergraduate programmes across the world.
-        </p>
-        <Link to="/high-school">
-          <button className="flex mx-auto font-raleway text-white text-[14px] font-medium leading-[16.44px] border border-[#C6C5C5] rounded-[8px] px-[20px] py-[10px] sm:px-[25px] sm:py-[15px] items-center gap-5 transition duration-300 hover:bg-white hover:text-[#006011] hover:border-[#006011]">
-            Learn more
-          </button>
-        </Link>
-      </div>
-    </div>
   </div>
 </div>
 

@@ -72,6 +72,7 @@ const PopupMenu = ({ onClose }) => {
   return (
     <div className="fixed inset-0 w-full shadow-md bg-[#FFFFFF]">
     <div className='grid grid-cols-3 gap-2'>
+       {/* Left Column (Content Links) */}
             <div className='bg-[#F6F6F6] p-5 space-y-6 py-[10%]'>
             <div className='bg-cover bg-center h-[159.33px] flex justify-center items-center rounded-lg ' style={{ backgroundImage: `url(${bg1})` }}>
             <Link to='/enquiry'><button className="flex font-raleway text-[#FFFFFF] text-[14px] font-medium leading-[16.44px] 

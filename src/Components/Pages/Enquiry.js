@@ -119,15 +119,15 @@ const Enquiry = () => {
       </label>
       <div className="flex-wrap gap-3">
         <label className="flex items-center font-raleway text-[#334155] text-[14px] font-normal">
-          <input type="checkbox" value="EYFS" {...register("gradeLevel", { required: "Please select a grade level" })} className="w-6 h-6 mr-2 border-gray-400 rounded-md focus:ring-0" />
+          <input type="checkbox" value="EYFS" {...register("gradeLevel", { required: "Please select a grade level" })} className="w-5 h-5 mr-2 border-gray-400 rounded-md focus:ring-0" />
           EYFS
         </label>
         <label className="flex items-center font-raleway text-[#334155] text-[14px] font-normal">
-          <input type="checkbox" value="Junior School" {...register("gradeLevel")} className="w-6 h-6 mr-2 border-gray-400 rounded-md focus:ring-0 mt-2 mb-2" />
+          <input type="checkbox" value="Junior School" {...register("gradeLevel")} className="w-5 h-5 mr-2 border-gray-400 rounded-md focus:ring-0 mt-2 mb-2" />
           Junior School
         </label>
         <label className="flex items-center font-raleway text-[#334155] text-[14px] font-normal">
-          <input type="checkbox" value="High School" {...register("gradeLevel")} className="w-6 h-6 mr-2 border-gray-400 rounded-md focus:ring-0" />
+          <input type="checkbox" value="High School" {...register("gradeLevel")} className="w-5 h-5 mr-2 border-gray-400 rounded-md focus:ring-0" />
           High School
         </label>
       </div>

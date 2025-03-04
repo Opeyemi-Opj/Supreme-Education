@@ -14,7 +14,6 @@ const Header = () => {
   
   const [showPopupMenu, setShowPopupMenu] = useState(false);
 
-
 const [isSearchOpen, setIsSearchOpen] = useState(false);
 const [showFirstHeader, setShowFirstHeader] = useState(true);
 const [showSecondHeader, setShowSecondHeader] = useState(false);
